@@ -19,7 +19,7 @@ class Clusters extends Table {
 }
 
 @DriftDatabase(tables: [Clusters])
-class KubeClientDatabase extends _$MyDatabase {
+class KubeClientDatabase extends _$KubeClientDatabase {
   KubeClientDatabase() : super(_openConnection());
 
   @override
