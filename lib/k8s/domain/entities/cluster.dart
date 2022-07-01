@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:kube_client/k8s/domain/entities/crendential.dart';
 
-enum ClusterStatus { down, up }
+enum ClusterStatus { down, up, unknown }
 
 class Cluster extends Equatable {
   final String id;

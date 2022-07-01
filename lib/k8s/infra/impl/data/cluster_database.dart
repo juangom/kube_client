@@ -3,14 +3,19 @@ import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as p;
+import 'package:uuid/uuid.dart';
 
 part 'cluster_database.g.dart';
 
+final _uuid = Uuid();
+
 class Clusters extends Table {
-  IntColumn get id => integer().autoIncrement()();
+  TextColumn get id => text().clientDefault(() => _uuid.v4())();
   TextColumn get name => text()();
   TextColumn get host => text()();
   IntColumn get port => integer()();
+  TextColumn get credType => text()();
+  TextColumn get credential => text()();
 }
 
 @DriftDatabase(tables: [Clusters])
