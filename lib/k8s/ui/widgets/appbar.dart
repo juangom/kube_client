@@ -13,8 +13,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       actions: [
         ElevatedButton(
-          onPressed: () {},
-          child: Text('Add Cluster'),
+          onPressed: () => Navigator.of(context).pushNamed('add_cluster_form'),
+          child: const Icon(Icons.add_box),
         ),
       ],
     );
