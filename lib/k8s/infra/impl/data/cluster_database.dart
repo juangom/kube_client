@@ -4,7 +4,7 @@ import 'package:drift/native.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as p;
 
-part 'cluster_list_repository.g.dart';
+part 'cluster_database.g.dart';
 
 class Clusters extends Table {
   IntColumn get id => integer().autoIncrement()();

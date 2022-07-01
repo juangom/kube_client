@@ -5,9 +5,9 @@ abstract class ClusterEvent {}
 class ClustersLoaded extends ClusterEvent {}
 
 class ClusterAdded extends ClusterEvent {
-  final Cluster cluster;
+  final ClusterValue clusterValue;
 
-  ClusterAdded(this.cluster);
+  ClusterAdded(this.clusterValue);
 }
 
 class ClusterDeleted extends ClusterEvent {

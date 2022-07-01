@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'cluster_list_repository.dart';
+part of 'cluster_database.dart';
 
 // **************************************************************************
 // MoorGenerator

@@ -13,4 +13,14 @@ class ClusterState extends Equatable {
         failureOption = none();
   @override
   List<Object?> get props => [clusters];
+
+  ClusterState copyWith({
+    List<Cluster>? clusters,
+    Option<Failure>? failureOption,
+  }) {
+    return ClusterState(
+      clusters: clusters ?? this.clusters,
+      failureOption: failureOption ?? this.failureOption,
+    );
+  }
 }
