@@ -21,9 +21,9 @@ class DriftClusterListRepository extends ClusterListRepository {
   }
 
   @override
-  Future<Either<Failure, Cluster>> addCluster(ClusterValue value) async {
+  Future<Either<Failure, Cluster>> addCluster(ClusterValue clusterValue) async {
     try {
-      final row = await _db.addCluster(clusterValueToCompanion(value));
+      final row = await _db.addCluster(clusterValueToCompanion(clusterValue));
       return right(clusterRowToEntity(row));
     } catch (e) {
       return left(Failure(e.toString()));

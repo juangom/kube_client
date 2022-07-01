@@ -23,7 +23,11 @@ class ClusterBloc extends Bloc<ClusterEvent, ClusterState> {
   _onClusterLoaded(ClustersLoaded event, Emitter<ClusterState> emit) async {
     final result = await _repository.clusters;
     result.fold(
-      (failure) => emit(state.copyWith(failureOption: optionOf(failure))),
+      (failure) => emit(
+        state.copyWith(
+          failureOption: optionOf(failure),
+        ),
+      ),
       (clusters) => emit(
         state.copyWith(
           failureOption: none(),
@@ -41,14 +45,24 @@ class ClusterBloc extends Bloc<ClusterEvent, ClusterState> {
           failureOption: optionOf(failure),
         ),
       ),
-      (clusters) => null, // TODO
+      (cluster) => emit(
+        state.copyWith(
+          failureOption: none(),
+          clusters: [...state.clusters, cluster],
+        ),
+      ),
     );
   }
 
   _onClusterDeleted(ClusterDeleted event, Emitter<ClusterState> emit) async {
     final result = await _repository.deleteCluster(event.cluster);
     result.fold(
-      () => null, // TODO
+      () => emit(
+        state.copyWith(
+          failureOption: none(),
+          clusters: state.clusters..remove(event.cluster),
+        ),
+      ),
       (failure) => emit(
         state.copyWith(
           failureOption: optionOf(failure),
