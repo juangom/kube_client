@@ -7,7 +7,7 @@ import 'package:uuid/uuid.dart';
 
 part 'cluster_database.g.dart';
 
-final _uuid = Uuid();
+const _uuid = Uuid();
 
 class Clusters extends Table {
   TextColumn get id => text().clientDefault(() => _uuid.v4())();
@@ -19,8 +19,8 @@ class Clusters extends Table {
 }
 
 @DriftDatabase(tables: [Clusters])
-class MyDatabase extends _$MyDatabase {
-  MyDatabase() : super(_openConnection());
+class KubeClientDatabase extends _$MyDatabase {
+  KubeClientDatabase() : super(_openConnection());
 
   @override
   int get schemaVersion => 1;

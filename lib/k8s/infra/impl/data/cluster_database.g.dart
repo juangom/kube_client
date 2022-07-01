@@ -329,8 +329,9 @@ class $ClustersTable extends Clusters with TableInfo<$ClustersTable, Cluster> {
   }
 }
 
-abstract class _$MyDatabase extends GeneratedDatabase {
-  _$MyDatabase(QueryExecutor e) : super(SqlTypeSystem.defaultInstance, e);
+abstract class _$KubeClientDatabase extends GeneratedDatabase {
+  _$KubeClientDatabase(QueryExecutor e)
+      : super(SqlTypeSystem.defaultInstance, e);
   late final $ClustersTable clusters = $ClustersTable(this);
   @override
   Iterable<TableInfo> get allTables => allSchemaEntities.whereType<TableInfo>();
