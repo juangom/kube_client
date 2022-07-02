@@ -7,9 +7,9 @@ class Cluster extends Equatable {
   final String id;
   final String name;
   final String host;
+  final int port;
   final ClusterStatus status;
   final Credential credential;
-  final int port;
   const Cluster({
     required this.id,
     required this.name,

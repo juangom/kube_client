@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kube_client/core/routes.dart';
+import 'package:kube_client/core/setup.dart';
 import 'package:kube_client/k8s/application/bloc/cluster/cluster_bloc.dart';
-import 'package:kube_client/k8s/infra/repositories/cluster_list_repository.dart';
+import 'package:kube_client/k8s/domain/repositories/cluster_list_repository.dart';
 import 'package:kube_client/k8s/ui/pages/home_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  setup();
   runApp(const App());
 }
 
@@ -17,7 +20,9 @@ class App extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (_) => ClusterBloc(repository: DriftClusterListRepository()),
+          create: (_) => ClusterBloc(
+            repository: getIt<ClusterListRepository>(),
+          ),
         ),
       ],
       child: MaterialApp(

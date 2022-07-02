@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kube_client/k8s/application/bloc/cluster/cluster_bloc.dart';
 import 'package:kube_client/k8s/domain/entities/cluster.dart';
-import 'package:kube_client/k8s/ui/pages/cluster/cluster_list_page.dart';
 import 'package:kube_client/k8s/ui/widgets/appbar.dart';
 import 'package:kube_client/k8s/ui/widgets/drawer.dart';
 
