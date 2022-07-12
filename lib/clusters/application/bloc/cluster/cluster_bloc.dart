@@ -2,9 +2,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:dartz/dartz.dart';
 import 'package:kube_client/core/failure.dart';
-import 'package:kube_client/k8s/domain/entities/cluster.dart';
-import 'package:kube_client/k8s/domain/repositories/cluster_list_repository.dart';
-import 'package:kube_client/k8s/domain/values/cluster_value.dart';
+import 'package:kube_client/clusters/domain/entities/cluster.dart';
+import 'package:kube_client/clusters/domain/repositories/cluster_list_repository.dart';
+import 'package:kube_client/clusters/domain/values/cluster_value.dart';
 
 part 'cluster_bloc_event.dart';
 part 'cluster_bloc_state.dart';

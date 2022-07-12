@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kube_client/k8s/domain/validators/input_validators.dart';
+import 'package:kube_client/clusters/domain/validators/input_validators.dart';
 
 class NewClusterFormPage extends StatelessWidget {
   const NewClusterFormPage({Key? key}) : super(key: key);

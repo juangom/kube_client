@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kube_client/k8s/application/bloc/cluster/cluster_bloc.dart';
-import 'package:kube_client/k8s/domain/entities/cluster.dart';
-import 'package:kube_client/k8s/ui/widgets/appbar.dart';
-import 'package:kube_client/k8s/ui/widgets/drawer.dart';
+import 'package:kube_client/clusters/application/bloc/cluster/cluster_bloc.dart';
+import 'package:kube_client/clusters/domain/entities/cluster.dart';
+import 'package:kube_client/clusters/ui/widgets/appbar.dart';
+import 'package:kube_client/clusters/ui/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

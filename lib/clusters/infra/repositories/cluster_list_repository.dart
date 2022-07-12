@@ -1,11 +1,11 @@
-import 'package:kube_client/k8s/domain/entities/cluster.dart';
+import 'package:kube_client/clusters/domain/entities/cluster.dart';
 import 'package:kube_client/core/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:kube_client/k8s/domain/repositories/cluster_list_repository.dart';
-import 'package:kube_client/k8s/domain/values/cluster_value.dart';
-import 'package:kube_client/k8s/infra/impl/data/cluster_database.dart'
+import 'package:kube_client/clusters/domain/repositories/cluster_list_repository.dart';
+import 'package:kube_client/clusters/domain/values/cluster_value.dart';
+import 'package:kube_client/clusters/infra/impl/data/cluster_database.dart'
     as database;
-import 'package:kube_client/k8s/infra/serializers/clusters.dart';
+import 'package:kube_client/clusters/infra/serializers/clusters.dart';
 
 class DriftClusterListRepository extends ClusterListRepository {
   final _db = database.KubeClientDatabase();

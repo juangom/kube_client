@@ -1,9 +1,9 @@
 import 'package:drift/drift.dart';
-import 'package:kube_client/k8s/domain/entities/crendential.dart';
-import 'package:kube_client/k8s/domain/values/cluster_value.dart';
-import 'package:kube_client/k8s/infra/impl/data/cluster_database.dart'
+import 'package:kube_client/clusters/domain/entities/crendential.dart';
+import 'package:kube_client/clusters/domain/values/cluster_value.dart';
+import 'package:kube_client/clusters/infra/impl/data/cluster_database.dart'
     as database;
-import 'package:kube_client/k8s/domain/entities/cluster.dart';
+import 'package:kube_client/clusters/domain/entities/cluster.dart';
 
 Iterable<Cluster> getClusters(Iterable<database.Cluster> rows) =>
     rows.map((r) => clusterRowToEntity(r));

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:kube_client/k8s/ui/pages/home_page.dart';
+import 'package:kube_client/clusters/ui/pages/home_page.dart';
 
 import 'package:kube_client/main.dart';
 

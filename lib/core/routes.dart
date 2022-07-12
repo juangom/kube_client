@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kube_client/k8s/ui/pages/cluster/new_cluster_form_page.dart';
-import 'package:kube_client/k8s/ui/pages/home_page.dart';
+import 'package:kube_client/clusters/ui/pages/cluster/new_cluster_form_page.dart';
+import 'package:kube_client/clusters/ui/pages/home_page.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {

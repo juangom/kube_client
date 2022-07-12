@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:kube_client/k8s/domain/entities/crendential.dart';
+import 'package:kube_client/clusters/domain/entities/crendential.dart';
 
 class ClusterValue extends Equatable {
   final String name;
